@@ -1,0 +1,309 @@
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v13-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/inter-v13-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v13-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v13-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-v13-latin-900.woff2") format("woff2");
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  border: 50%;
+  width: 1rem;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.641);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.723);
+  outline: 1px solid transparent;
+  border-radius: 50px;
+}
+
+.header .header__main-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 25px;
+}
+.header .header__top-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.header .website__logo {
+  width: 200px;
+  height: 30px;
+}
+.header #header__select {
+  padding-right: 10px;
+  width: 150px;
+  padding: 11px 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #7000ff;
+  font-weight: 600;
+  background-color: #f0f0ff;
+  border: 2px solid;
+  border-color: transparent;
+  outline-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.header #header__select:hover {
+  color: #7000ff;
+  background-color: #c0c0db;
+}
+.header .header__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 480px;
+  position: relative;
+}
+.header #srchInp {
+  width: 480px;
+  border-radius: 4px;
+  border: 0px;
+  background: #fff;
+  display: flex;
+  padding: 11.25px 10px;
+  outline: 1px solid rgba(54, 54, 64, 0.2);
+}
+.header .srchBtn {
+  background-color: #f2f4f7;
+  padding: 10.3px 20px;
+  border: 1px solid transparent;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+}
+.header .header__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  font-size: 14px;
+}
+.header .header__list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header__list li button {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 9px 7px;
+  gap: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.header .header__list li button:hover {
+  background-color: #d4d4d4;
+}
+.header .header__list li button p {
+  font-size: 14px;
+}
+.header .basket__count {
+  color: #fff;
+  padding: 0px 3px;
+  background: #7000ff;
+  border-radius: 3px;
+}
+.header .header__bottom-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  position: relative;
+}
+.header .header__bottom-inner {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  gap: 10px;
+  justify-content: space-between;
+}
+.header .header__bottom-inner.open {
+  flex-direction: column;
+}
+.header .header__bottom-links {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.header .header__bottom-links.open {
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.header .header__links {
+  color: #595b66;
+  position: relative;
+}
+.header .header__links::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: black;
+  bottom: -3px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+.header .header__links:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.header .header__links:hover {
+  color: black;
+}
+.header .header__links.open:hover {
+  color: red;
+}
+.header .header__bottom-buttons {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+}
+.header .header__bottom-buttons.open {
+  flex-direction: column;
+  align-items: start;
+  left: 0;
+  gap: 10px;
+}
+.header .header__bottom-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  color: black;
+}
+.header .header__other-button {
+  width: 1%;
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  right: 60px;
+}
+.header .header__link-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: capitalize;
+}
+.header .header__other-btn {
+  border: 0px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #595b66;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.header .arrow__down,
+.header .arrow__up {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  display: none;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out, display 0s 0.3s;
+}
+.header .arrow__up.open,
+.header .arrow__down.open {
+  opacity: 1;
+  height: auto;
+  display: inline-block;
+  animation: fadeInRotate 0.3s ease-in-out;
+}
+.header .arrow__up.hidden,
+.header .arrow__down.hidden {
+  opacity: 0;
+  height: 0;
+  animation: fadeOutRotate 0.3s ease-in-out;
+  display: none;
+}
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: rotate(-120deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeOutRotate {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(-120deg);
+  }
+}/*# sourceMappingURL=styles.css.map */
